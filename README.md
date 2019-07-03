@@ -8,7 +8,7 @@ This is an example project to illustrate an implementation of multiple user type
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/alex.andur/django-multiple-user-types-example.git
+git clone https://github.com/alex.andur/HomeworksChecker.git
 ```
 
 Install the requirements:
