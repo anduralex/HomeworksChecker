@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div style="background:transparent !important" class="jumbotron">
+	<div class="container">
+
+		<div class="modal-body">
+			<div class="container-fluid">
+				<div class="row">
+
+					<form class="form-horizontal" method='POST'>
+						<br><br><br>
+						<div class="form-group .col-6 .col-sm-4">
+							<h1>Sign up for a free account</h1>
+  							<h1 class="lead">Select below the type of account you want to create</h1>
+                              <a href="{% url 'student_signup' %}" class="btn btn-primary btn-student btn-lg" role="button">I'm a student</a>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+							  <a href="{% url 'teacher_signup' %}" class="btn btn-warning btn-teacher btn-lg" role="button">I'm a teacher</a>
+
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+<!-- Change objects of interest-->
+
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br><br><br><br><br><br>
+  <h2 class="mb-3">Update your interests</h2>
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-success">Save changes</button>
+    <a href="{% url 'students:quiz_list' %}" class="btn btn-outline-secondary">Nevermind</a>
+    <a href="{% url 'home' %}" class="btn btn-secondary" role="button">Student page!</a>
+  </form>
+{% endblock %}

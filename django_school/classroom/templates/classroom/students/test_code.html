@@ -1,0 +1,46 @@
+{%extends "base.html" %}
+{% load djangocodemirror_tags %}
+{% load staticfiles %}
+{% block content %}
+
+<div id="content">
+	<!-- ************ SOURCE CODE  ************ -->
+	<br><br><br><br>
+  <form method="POST" action="">{% csrf_token %}
+      <div id="title-code" class="head-section">
+        Python Source Code
+    </div><p></p>
+    <div class="col-sm-6">
+       <textarea id="code" name="code" rows="7" cols="140">{{code}}</textarea>
+   </div>
+   <input id="launch-button" class="btn btn-sm" type="submit" value="Compile" />
+   <!-- {% if user.is_authenticated %} -->
+   <input id="save-button" class="btn btn-sm" type="submit" value="Save" />
+   <!-- {% endif %} -->
+   <a class="btn btn-primary" href="/students/">Back</a>
+      <p><input type="submit" name="checkplagiarism" value="CHECK PLAGIARISM"></p>
+      <p><h2>Input query text matches 23.53% with database file uploaded by FloareanAlin.</h2></p>
+</form>
+{% codemirror_instance 'restructuredtext' 'code_codemirror' 'code' %}
+<!-- ************ RUNNING ZONE RESULTS ************ -->
+
+<div id="result">
+   <br><br>
+   <div id="title-result" class="head-section">
+    Output result
+</div>
+
+<textarea id="text-result" rows="7" cols="140" readonly>{{ resrun }}</textarea>
+</div>
+
+<!-- ************ COMPILATION RESULTS ZONE ************ -->
+<div id="compile">
+    <div id="title-compile" class="head-section">
+        Compilation / Output
+    </div>
+    <br/>
+    <textarea id="text-compile" rows="7" cols="140" readonly>{{ rescomp }}</textarea>
+</div>
+</div>
+
+{% endblock content %}

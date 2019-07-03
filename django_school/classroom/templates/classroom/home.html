@@ -1,0 +1,72 @@
+
+{%extends "base.html" %}
+
+  {%load staticfiles%}
+
+  {% block content %}
+</br>
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Welcome to the </h1>
+          <h1 class = "display-3">Homeworks Checker! &#129488</h1>
+          <h2>If you already have an account, go ahead and log in. If you are new to Homeworks Checker, get started by creating a <a href="{% url 'student_signup' %}">Student account</a> or a <a href="{% url 'teacher_signup' %}">Teacher account</a>. </h2>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <!--Starts here-->
+            <div class="container">
+              <h2>What's this about?</h2>
+              <p>This Django application is an example I created to make programming more accessible. I build this powerful yet simple tools and platforms for teachers and students... In this application, users can sign up as a student or a teacher. Teachers can create exercises and students can solve them based on their interests.</p>
+              <div class="card img-fluid" style="width:500px">
+                <img class="card-img-top" src="static/img/about.png" alt="Card image" width="300" height="300">
+                <div class="card-img-overlay">
+                </div>
+              </div>
+            </div>
+            <!--Ends here-->
+
+
+            <!--<h2>What's this about?</h2>-->
+            <!--<p>This Django application is an example I created to make programming more accessible. I build this powerful yet simple tools and platforms for teachers and students... In this application, users can sign up as a student or a teacher. Teachers can create exercises and students can solve them based on their interests.</p>-->
+            <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
+          </div>
+          <div class="col-md-4">
+            <div class="container">
+              <h2>Plagiarism Checker</h2>
+              <p> It's another task of this platform that can detect similar project code with unauthorized copy-paste. It was designed to use the teacher digital open database to search the similarities.
+              </p>
+              <br><br><br>
+              <div class="card img-fluid" style="width:500px">
+                <img class="card-img-top" src="static/img/checker.png" alt="Card image" width="300" height="300">
+                <div class="card-img-overlay">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+
+            <div class="container">
+              <h2>Python compiler</h2>
+              <p>Allows students to compile the source code and execute it. This online compiler has the same basic functionality as a conventional Python compiler. Students can send their code to examination in a very simple and fast way.</p>
+              <br><br>
+              <div class="card img-fluid" style="width:500px">
+                <img class="card-img-top" src="static/img/python.png" alt="Card image"  width="300" height="300">
+                <div class="card-img-overlay">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+  {% endblock %}
